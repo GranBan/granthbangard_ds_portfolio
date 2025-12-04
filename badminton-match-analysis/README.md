@@ -36,10 +36,10 @@ This project analyzes 6,736 professional badminton matches from the BWF World To
 
 ## 📁 Project Structure
 
-badminton-match-analysis/
--badminton-match-analysis.ipynb
--README.md
-  |- Plots
+badminton-match-analysis/  
+-badminton-match-analysis.ipynb  
+-README.md  
+  |- Plots  
 
 ---
 
@@ -54,8 +54,7 @@ badminton-match-analysis/
 ---
 
 ## 📘 View the Notebook
-👉 **Open the notebook:** `badminton_match_analysis.ipynb`  
-(Once uploaded, GitHub will render it automatically.)
+👉 **Open the notebook:** `badminton_match_analysis.ipynb`
 
 ---
 
