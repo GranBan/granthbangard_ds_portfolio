@@ -31,5 +31,5 @@ A business-focused ML project (e.g., churn, loan default, or attrition predictio
 
 ## 📬 Contact
 
-**Email:** gbangard@illinois.edu  
+**Email:** bangard2@illinois.edu  
 **GitHub:** https://github.com/GranthBan
