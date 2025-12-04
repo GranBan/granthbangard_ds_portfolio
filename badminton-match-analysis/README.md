@@ -54,7 +54,7 @@ badminton-match-analysis/
 ---
 
 ## 📘 View the Notebook
-👉 **Open the notebook:** `badminton_match_analysis.ipynb`
+👉 **Open the notebook:** `badminton-match-analysis.ipynb`
 
 ---
 
