@@ -1,6 +1,6 @@
 # 🏸 Badminton Match Analysis (BWF World Tour 2018–2021)
 
-This project analyzes 6,736 professional badminton matches from the BWF World Tour between 2018 and 2021. It explores trends in match competitiveness, country performance, player behavior, and includes a predictive model for identifying whether a match will go to three sets.
+This project analyzes 6,736 professional badminton matches from the BWF World Tour between 2018 and 2021. It explores trends in match competitiveness, country performance, player behavior, and includes a predictive model to identify highly competitive matches (three-set outcomes).
 
 ---
 
@@ -10,6 +10,13 @@ This project analyzes 6,736 professional badminton matches from the BWF World To
 - Explore how match characteristics influence competitiveness
 - Build a predictive model to classify 2-set vs 3-set matches
 - Communicate insights through clear visuals and explanations
+
+---
+
+## 🔑 Key Insights
+- Three-set matches were more common in evenly ranked matchups, indicating competitiveness is strongly tied to parity
+- Post-COVID seasons showed shorter average match durations, suggesting changes in tournament structure and player conditioning
+- Countries such as India and China consistently produced longer, more competitive matches across tournaments
 
 ---
 
@@ -31,6 +38,7 @@ This project analyzes 6,736 professional badminton matches from the BWF World To
 - Logistic Regression classifier  
 - Train/test split, scaling, and evaluation  
 - Metrics: accuracy, precision, recall, F1-score  
+- Achieved balanced precision and recall, demonstrating the model’s ability to identify competitive matches beyond baseline heuristics.
 
 ---
 
