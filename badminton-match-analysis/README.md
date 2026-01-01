@@ -38,7 +38,7 @@ This project analyzes 6,736 professional badminton matches from the BWF World To
 - Logistic Regression classifier  
 - Train/test split, scaling, and evaluation  
 - Metrics: accuracy, precision, recall, F1-score  
-- Achieved balanced precision and recall, demonstrating the model’s ability to identify competitive matches beyond baseline heuristics.
+- Achieved balanced precision and recall, indicating the model’s ability to identify competitive matches beyond simple baselines.
 
 ---
 
