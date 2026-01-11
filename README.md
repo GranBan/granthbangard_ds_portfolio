@@ -3,7 +3,7 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
 
 ---
 
-## 📊 Projects
+## Projects
 
 ### 1. Badminton Match Analysis | BWF World Tour 2018–2021
 - Analyzed 6,736 professional badminton matches to study country dominance, match competitiveness, and COVID-era disruptions.
@@ -21,7 +21,7 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
 
 ---
 
-## 🧠 Skills Highlighted
+## Skills Highlighted
 
 - Python, pandas, NumPy, Matplotlib, scikit-learn  
 - Exploratory Data Analysis (EDA)  
@@ -31,7 +31,7 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Email:** bangard2@illinois.edu  
 **GitHub:** https://github.com/GranBan
