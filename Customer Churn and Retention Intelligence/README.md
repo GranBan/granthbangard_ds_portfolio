@@ -1,22 +1,24 @@
 # **Customer Churn and Retention Intelligence Analysis**
 
-This project analyzes customer behavior in a subscription-based telecom company using the Telco Customer Churn Dataset. The goal is to identify customers likely to churn, understand the key drivers behind churn, and provide actionable retention strategies that align with business objectives.
+This project analyzes customer behavior in a subscription-based telecom company to **predict churn risk, identify key churn drivers,** and **translate insights into actionable retention strategies** aligned with business objectives.
+
+The analysis emphasizes decision-making under trade-offs, prioritizing high-risk customer identification over pure predictive accuracy.
 
 
 ## Project Objectives
 
-- Explore behavioral, contractual, and billing differences between churned and retained customers
-- Identify factors that most strongly influence churn
-- Build a predictive model to assess churn risk
-- Translate insights into actionable retention strategies for the business
+- Understand behavioral, contractual, and billing differences between churned and retained customers.
+- Identify the strongest drivers of customer churn.
+- Build and evaluate churn prediction models using business-relevant metrics.
+- Translate insights and model outputs into targeted retention strategies.
 
 
 ## Key Insights
 
-- Churn Distribution: ~27% of customers churn, indicating a substantial retention challenge.
-- Tenure: Shorter-tenured customers are more likely to churn; early engagement is critical.
+- **Churn Rate:** ~27% of customers churn, indicating a substantial retention challenge.
+- Tenure: Short-tenured customers are significantly more likely to churn, highlighting early lifecycle risk.
 - Contract Type: Month-to-month contracts show higher churn risk than longer-term plans.
-- Monthly Charges: Higher charges correlate with higher churn probability, especially among newer customers.
+- Monthly Charges: Higher charges correlate with higher churn probability, particularly among newer customers.
 - Service Engagement: Customers lacking value-added services (Tech Support, Streaming, Security) are more likely to leave, highlighting engagement as a retention lever.
 
 
@@ -24,12 +26,13 @@ This project analyzes customer behavior in a subscription-based telecom company 
 
 ### 1. Data Cleaning & Preparation
 - Converted TotalCharges to numeric and removed incomplete records
-- Dropped non-informative columns (customerID)
-- Encoded the target variable Churn as 0 (No) / 1 (Yes)
+- Dropped non-informative identifiers (customerID)
+- Encoded churn as a binary target variable {0 (No) / 1 (Yes)}
 
 ### 2. Exploratory Data Analysis (EDA)
-- Visualized churn distribution and feature relationships using seaborn
 - Identified patterns in tenure, contract type, monthly charges, and service usage
+- Visualized churn distribution and feature relationships using seaborn
+- Identified early behavioral signals of churn risk
 
 ### 3. Feature Engineering
 - Tenure Groups: Categorized customers into lifecycle blocks (0–12, 12–24, 24–48, 48+)
@@ -59,10 +62,10 @@ Random Forest	          0.801	      0.583	            0.563	               0.55
 
 ## Retention Strategy Recommendations
 
-- Early-Tenure Intervention: Target customers within the first 6–12 months for proactive engagement
-- Contract Stabilization: Encourage high-risk customers to switch from month-to-month to longer-term plans
-- Targeted Offers: Focus retention incentives on customers flagged by the model
-- Engagement Nudges: Promote value-added services to increase stickiness
+- **Early-Tenure Intervention:** Target customers within the first 6–12 months for proactive engagement
+- **Contract Stabilization:** Incentivize high-risk customers to switch from month-to-month to longer-term plans
+- **Targeted Retention Offers:** Apply offers only to customers flagged above the churn risk threshold
+- **Engagement Nudges:** Promote value-added services to increase customer stickiness
 
 
 ## Skills Demonstrated
@@ -70,9 +73,9 @@ Random Forest	          0.801	      0.583	            0.563	               0.55
 - Python (pandas, NumPy, Matplotlib, seaborn)
 - Data cleaning and preprocessing
 - Exploratory Data Analysis (EDA)
-- Feature engineering for churn prediction
+- Feature engineering for behavioral modeling and churn prediction
 - Logistic Regression & Random Forest (scikit-learn)
-- Data storytelling & actionable business insights
+- Business-oriented data storytelling & actionable insights
 
 Project Structure
 telco-customer-churn/
@@ -83,7 +86,7 @@ telco-customer-churn/
 
 ## View the Notebook
 
-👉 Open the notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb
+Open the notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb
 
 
 ## Future Improvements
