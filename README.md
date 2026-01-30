@@ -7,7 +7,7 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
 ### 1. Badminton Match Analysis | BWF World Tour 2018–2021
 - Analyzed 6,736 professional badminton matches to study country dominance, match competitiveness, and COVID-era disruptions.
 - Built a logistic regression model to predict whether a match goes to 3 sets.
-- Includes EDA, visualizations (bar, line, box plots), feature engineering, and model evaluation.
+- Performed end-to-end analysis including Exploratory Data Analysis, visualizations (bar, line, box plots), feature engineering, and model evaluation.
 
 **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/badminton-match-analysis/badminton-match-analysis.ipynb  
 
@@ -31,5 +31,6 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
 
 ## Contact
 
-**Email:** bangardgranth@gmail.com (Primary), bangard2@illinois.edu  
 **GitHub:** https://github.com/GranBan
+**LinkedIn:** https://linkedin.com/in/granth-bangard
+**Email:** bangardgranth@gmail.com (Primary), bangard2@illinois.edu  
