@@ -31,6 +31,6 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
 
 ## Contact
 
-**GitHub:** https://github.com/GranBan
-**LinkedIn:** https://linkedin.com/in/granth-bangard
-**Email:** bangardgranth@gmail.com (Primary), bangard2@illinois.edu  
+**GitHub:** https://github.com/GranBan  
+**LinkedIn:** https://linkedin.com/in/granth-bangard  
+**Email:** bangardgranth@gmail.com (Primary), bangard2@illinois.edu
