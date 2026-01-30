@@ -22,16 +22,16 @@ This project analyzes customer behavior in a subscription-based telecom company 
 
 ## Methods & Techniques
 
-### **1. Data Cleaning & Preparation**
+### 1. Data Cleaning & Preparation
 - Converted TotalCharges to numeric and removed incomplete records
 - Dropped non-informative columns (customerID)
 - Encoded the target variable Churn as 0 (No) / 1 (Yes)
 
-### **2. Exploratory Data Analysis (EDA)**
+### 2. Exploratory Data Analysis (EDA)
 - Visualized churn distribution and feature relationships using seaborn
 - Identified patterns in tenure, contract type, monthly charges, and service usage
 
-### **3. Feature Engineering**
+### 3. Feature Engineering
 - Tenure Groups: Categorized customers into lifecycle blocks (0–12, 12–24, 24–48, 48+)
 - Contract Commitment: Encoded month-to-month, one-year, and two-year contracts as ordered features
 - Engagement Score: Aggregated value-added services (Tech Support, Streaming, Security)
@@ -54,7 +54,7 @@ Logistic Regression	    0.830	      0.877	            0.449	               0.61
 Random Forest	          0.801	      0.583	            0.563	               0.55
 
 
-**Final Model:** Logistic Regression was selected for its interpretability and ability to guide actionable retention decisions.
+****Final Model:**** Logistic Regression was selected for its interpretability and ability to guide actionable retention decisions.
 
 
 ## Retention Strategy Recommendations
@@ -80,16 +80,15 @@ telco-customer-churn/
 ├─ README.md
 ├─ Plots/
 
-View the Notebook
 
-👉 Open the notebook: Telco Customer Churn Analysis
+## View the Notebook
 
-Future Improvements
+👉 Open the notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb
 
-Cost-sensitive modeling incorporating customer lifetime value
 
-Two-stage models combining high-recall and precision-focused models
+## Future Improvements
 
-Dynamic thresholds based on customer segments
-
-A/B testing retention strategies to validate real-world impact
+- Cost-sensitive modeling incorporating customer lifetime value
+- Two-stage models combining high-recall and precision-focused models
+- Dynamic thresholds based on customer segments
+- A/B testing retention strategies to validate real-world impact
