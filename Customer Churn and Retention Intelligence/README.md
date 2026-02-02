@@ -77,12 +77,6 @@ Random Forest	          0.801	      0.583	            0.563	               0.55
 - Logistic Regression & Random Forest (scikit-learn)
 - Business-oriented data storytelling & actionable insights
 
-Project Structure
-telco-customer-churn/
-├─ telco-churn-analysis.ipynb
-├─ README.md
-├─ Plots/
-
 
 ## View the Notebook
 
