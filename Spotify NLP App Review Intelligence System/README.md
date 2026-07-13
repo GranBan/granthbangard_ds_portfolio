@@ -86,7 +86,7 @@ The pipeline is deployed as a 7-page Streamlit app:
 
 ## View the Notebook
 
-👉 [Open the notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb)
+👉 [Open the notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/nlp_app_review.ipynb)
 
 ## Future Improvements
 
