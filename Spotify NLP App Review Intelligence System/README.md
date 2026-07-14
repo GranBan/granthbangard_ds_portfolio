@@ -1,8 +1,28 @@
 # Spotify NLP App Review Intelligence System
 
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![DistilBERT](https://img.shields.io/badge/DistilBERT-Transformers-success)
+![BERTopic](https://img.shields.io/badge/BERTopic-NLP-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
+
 Transforms 100,000 raw Google Play reviews into a prioritized product decision system for Spotify. Fine-tuned DistilBERT classifies sentiment from text (93.5% macro F1), BERTopic discovers 51 complaint themes, and a custom priority matrix scores each theme by frequency, severity, and recent trend into a ranked, actionable fix list.
 
 **100,000 reviews** · **93.5% Macro F1** · **51 complaint topics** · **DistilBERT + BERTopic** · **[Live App](https://spotify-review-intelligence.streamlit.app)**
+
+## Contents
+
+- [Live Demo](#live-demo)
+- [Why This Project Exists](#why-this-project-exists)
+- [Pipeline](#pipeline)
+- [Interactive Demo](#interactive-demo)
+- [Evaluation](#evaluation)
+- [Repository Structure](#repository-structure)
+- [Installation](#installation)
+- [Tech Stack](#tech-stack)
+- [Engineering Decisions](#engineering-decisions)
+- [Challenges](#challenges)
+- [Limitations](#limitations)
+- [Future Improvements](#future-improvements)
 
 ---
 
@@ -13,7 +33,8 @@ Transforms 100,000 raw Google Play reviews into a prioritized product decision s
 ## Live Demo
 
 - **App:** https://spotify-review-intelligence.streamlit.app
-- > **Note:** The app may take 30-60 seconds to wake up on first load if it's been inactive, Streamlit Community Cloud puts unused apps to sleep. Subsequent loads are fast.
+> [!NOTE]
+> The app may take 30-60 seconds to wake up on first load if it's been inactive, Streamlit Community Cloud puts unused apps to sleep. Subsequent loads are fast.
 - **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb
 - **Data Source:** Google Play Store, scraped directly via `google-play-scraper`
 
@@ -59,6 +80,9 @@ graph LR
 **Ingestion.** 100,000 Spotify reviews scraped directly from Google Play, preserving app version metadata needed for temporal analysis, a static Kaggle dump wouldn't have this.
 
 **Sentiment classification.** Star-rating-derived labels used as an initial baseline, then replaced by a fine-tuned DistilBERT model reading review text directly. Initial 3-class setup only reached 71% macro F1, limited by a small (5,565 sample), inherently ambiguous neutral class. Switching to binary (Negative/Positive) and using the full available data (56,510 balanced training reviews) raised macro F1 to 93.5%.
+
+> [!IMPORTANT]
+> Macro F1, not accuracy, is the primary metric here, it weights both classes equally despite the 66/28/6 class imbalance in the raw star-rating data.
 
 **Full inference.** The fine-tuned model runs on all 100,000 reviews, producing text-based labels that diverge meaningfully from star-rating labels: 3,554 high-star reviews were predicted negative based on their text.
 
