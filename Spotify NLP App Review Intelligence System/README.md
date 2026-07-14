@@ -115,6 +115,8 @@ Average prediction confidence is 96.2%, with 90.5% of predictions above 90% conf
 
 This repository contains the analysis notebook. The deployed Streamlit app lives in a separate repository.
 
+**App source code:** https://github.com/GranBan/spotify-review-intelligence
+
 ```
 Spotify NLP App Review Intelligence System/
 ├── app_review_nlp.ipynb
@@ -127,8 +129,6 @@ Spotify NLP App Review Intelligence System/
     ├── priority_matrix.png
     ├── version_trends.png
 ```
-
-**App source code:** https://github.com/GranBan/spotify-review-intelligence
 
 ## Installation
 
