@@ -45,6 +45,8 @@ graph LR
     A[Cricsheet JSON] --> B[Parser] --> C[Ball-by-ball df] --> D[2nd innings filter] --> E[Over-level aggregation] --> F[Feature engineering] --> G[Temporal split] --> H[Logistic Regression] --> I[XGBoost] --> J[Isotonic calibration] --> K[SHAP selection] --> L[Streamlit]
 ```
 
+---
+
 **Ingestion.** Custom parser flattens 10,458 Cricsheet match JSONs into a single 2.39M-row ball-by-ball dataframe.
 
 **Innings filter.** Only 2nd innings (chasing team) rows are kept. First-innings win probability requires projecting a target first, a different problem, deliberately scoped out.
