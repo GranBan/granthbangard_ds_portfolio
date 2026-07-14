@@ -40,10 +40,10 @@ Most sports win-probability projects report a ranking metric (AUC, accuracy) and
 
 ## Pipeline
 
-Cricsheet JSON → Parser → Ball-by-ball dataframe → 2nd innings filter
-→ Over-level aggregation → Feature engineering → Temporal split
-→ Logistic Regression baseline → XGBoost → Isotonic calibration
-→ SHAP feature selection → Streamlit deployment
+```mermaid
+graph LR
+    A[Cricsheet JSON] --> B[Parser] --> C[Ball-by-ball df] --> D[2nd innings filter] --> E[Over-level aggregation] --> F[Feature engineering] --> G[Temporal split] --> H[Logistic Regression] --> I[XGBoost] --> J[Isotonic calibration] --> K[SHAP selection] --> L[Streamlit]
+```
 
 **Ingestion.** Custom parser flattens 10,458 Cricsheet match JSONs into a single 2.39M-row ball-by-ball dataframe.
 
