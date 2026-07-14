@@ -57,7 +57,7 @@ graph LR
 
 **Ingestion.** 100,000 Spotify reviews scraped directly from Google Play, preserving app version metadata needed for temporal analysis, a static Kaggle dump wouldn't have this.
 
-**Sentiment classification.** Star-rating-derived labels used as an initial baseline, then replaced by a fine-tuned DistilBERT model reading review text directly. Initial 3-class setup only reached 71% macro F1, limited by a small (5,565-sample), inherently ambiguous neutral class. Switching to binary (Negative/Positive) and using the full available data (56,510 balanced training reviews) raised macro F1 to 93.5%.
+**Sentiment classification.** Star-rating-derived labels used as an initial baseline, then replaced by a fine-tuned DistilBERT model reading review text directly. Initial 3-class setup only reached 71% macro F1, limited by a small (5,565 sample), inherently ambiguous neutral class. Switching to binary (Negative/Positive) and using the full available data (56,510 balanced training reviews) raised macro F1 to 93.5%.
 
 **Full inference.** The fine-tuned model runs on all 100,000 reviews, producing text-based labels that diverge meaningfully from star-rating labels: 3,554 high-star reviews were predicted negative based on their text.
 
@@ -75,17 +75,17 @@ graph LR
 
 ## Interactive Demo
 
-**Overview** — Sentiment distribution, review volume trends, and dataset summary statistics.
+**Overview** - Sentiment distribution, review volume trends, and dataset summary statistics.
 
-**Complaint Intelligence** — BERTopic clusters with representative reviews and keyword search.
+**Complaint Intelligence** - BERTopic clusters with representative reviews and keyword search.
 
-**Version Trends** — Negative sentiment rate tracked across app versions with spike detection.
+**Version Trends** - Negative sentiment rate tracked across app versions with spike detection.
 
-**Priority Matrix** — Ranked, actionable fix list with transparent scoring methodology.
+**Priority Matrix** - Ranked, actionable fix list with transparent scoring methodology.
 
-**Misclassification Analysis** — Where model predictions disagree with star ratings, and why.
+**Misclassification Analysis** - Where model predictions disagree with star ratings, and why.
 
-**Embedding Visualization** — 2D UMAP projection showing how BERTopic separates complaint themes.
+**Embedding Visualization** - 2D UMAP projection showing how BERTopic separates complaint themes.
 
 ---
 
