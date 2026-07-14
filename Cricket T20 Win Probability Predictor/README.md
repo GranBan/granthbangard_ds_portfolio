@@ -13,6 +13,7 @@ Predicts the win probability of the chasing team after every over of a T20 crick
 ## Live Demo
 
 - **App:** https://cricket-t20-win-probability.streamlit.app
+> **Note:** The app may take 30-60 seconds to wake up on first load if it's been inactive, Streamlit Community Cloud puts unused apps to sleep. Subsequent loads are fast.
 - **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb
 - **Data Source:** [Cricsheet](https://cricsheet.org)
 
