@@ -1,8 +1,9 @@
 # granthbangard_ds_portfolio
 
 A portfolio of Data Science and ML projects where I explore data, build models, and explain insights in a clear, practical way. Each project walks through the full workflow, from cleaning and visualization to feature engineering and prediction using Python. Built to showcase my hands-on approach to analytics and readiness for internships in DS/ML.
-  
-  
+
+<p></p>
+
 ## Projects
 
 ### 1. Cricket T20 Win Probability Predictor
