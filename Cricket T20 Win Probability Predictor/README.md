@@ -1,8 +1,28 @@
 # Cricket T20 Win Probability Predictor
 
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![XGBoost](https://img.shields.io/badge/XGBoost-ML-success)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
+
 Predicts the win probability of the chasing team after every over of a T20 cricket match, using ball-by-ball data from 2.3 million deliveries across 10,458 professional matches. Calibrated XGBoost achieves 0.924 AUC and 0.112 Brier Score on a chronologically held-out 2025-2026 test set, validated against real match narratives including the 2024 T20 World Cup Final.
 
 **10,458 matches** · **2.39M deliveries** · **10 T20 leagues** · **AUC 0.924** · **Brier 0.112** · **XGBoost + SHAP** · **[Live App](https://cricket-t20-win-probability.streamlit.app)**
+
+## Contents
+
+- [Live Demo](#live-demo)
+- [Why This Project Exists](#why-this-project-exists)
+- [Pipeline](#pipeline)
+- [Interactive Demo](#interactive-demo)
+- [Feature Engineering](#feature-engineering)
+- [Evaluation](#evaluation)
+- [Repository Structure](#repository-structure)
+- [Installation](#installation)
+- [Tech Stack](#tech-stack)
+- [Engineering Decisions](#engineering-decisions)
+- [Challenges](#challenges)
+- [Limitations](#limitations)
+- [Future Improvements](#future-improvements)
 
 <br>
 
@@ -13,7 +33,8 @@ Predicts the win probability of the chasing team after every over of a T20 crick
 ## Live Demo
 
 - **App:** https://cricket-t20-win-probability.streamlit.app
-> **Note:** The app may take 30-60 seconds to wake up on first load if it's been inactive, Streamlit Community Cloud puts unused apps to sleep. Subsequent loads are fast.
+> [!NOTE]
+> The app may take 30-60 seconds to wake up on first load if it's been inactive, Streamlit Community Cloud puts unused apps to sleep. Subsequent loads are fast.
 - **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb
 - **Data Source:** [Cricsheet](https://cricsheet.org)
 
@@ -58,6 +79,9 @@ graph LR
 
 **Temporal split.** Cricket has changed materially since 2008, scoring rates are higher, batting is more aggressive. A random split would let 2024 matches leak into training while 2010 matches sit in test. Filtered directly on `season`: train 2008-2024, test 2025-2026, with 2005-2007 dropped for insufficient T20 volume.
 
+> [!IMPORTANT]
+> The model uses a chronological train/test split (2008-2024 train, 2025-2026 test) to avoid temporal leakage.
+
 **Baseline before complexity.** Logistic Regression is trained first as a genuine benchmark (0.917 AUC on its own). XGBoost is justified as final model only because it beats that baseline on every metric measured.
 
 **Calibration.** Isotonic regression fit on top of XGBoost, verified visually with calibration curves rather than assumed correct.
@@ -101,6 +125,9 @@ graph LR
 ## Evaluation
 
 Accuracy is reported for completeness but isn't the optimization target. **Log loss and Brier score are primary**, they penalize confidently wrong predictions and directly measure whether stated confidence matches reality.
+
+> [!IMPORTANT]
+> Probabilities are isotonically calibrated. Log loss and Brier score, not accuracy, are the primary evaluation metrics for this model.
 
 Both models are well-calibrated in the 0.5-0.8 range, with Logistic Regression tracking marginally tighter there. XGBoost is clearly better calibrated at 0.8-1.0, the range that matters most operationally since that's where a live chase sits during its most-watched, most-decided moments.
 
@@ -193,4 +220,4 @@ streamlit run app.py
 
 ## Results
 
-10,458 matches, 2.39M ball-level records, one calibrated XGBoost model. AUC 0.924, Log Loss 0.345, Brier Score 0.112 on a chronologically held-out 2025-2026 season. Three features removed on SHAP evidence with no performance cost. Validated qualitatively against 21 real matches before shipping as a 5-page live Streamlit application.
+10,458 matches, 2.39M ball-level records, one calibrated XGBoost model. AUC 0.924, Log Loss 0.345, Brier Score 0.112 on a chronologically held-out 2025-2026 season. Three features removed on SHAP evidence with no performance cost. Validated quantitatively on a chronologically held-out test set and qualitatively against 21 historic matches before deployment as a 5-page live Streamlit application.
