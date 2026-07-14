@@ -4,6 +4,8 @@ Predicts the win probability of the chasing team after every over of a T20 crick
 
 **10,458 matches** · **2.39M deliveries** · **10 T20 leagues** · **AUC 0.924** · **Brier 0.112** · **XGBoost + SHAP** · **[Live App](https://cricket-t20-win-probability.streamlit.app)**
 
+<br>
+
 ![Description](assets/screenshots/homepage_hero_t20.png)
 
 ---
