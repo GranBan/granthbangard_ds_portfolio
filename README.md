@@ -14,7 +14,7 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
   - AUC 0.924, Log Loss 0.345, Brier Score 0.112 on unseen 2025-2026 matches
   - Deployed as a 5-page interactive Streamlit app with live prediction, full match replay, and 21 famous match case studies
 
-Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb
+Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb  
 Live App: https://cricket-t20-win-probability.streamlit.app
 
 
@@ -27,7 +27,7 @@ Live App: https://cricket-t20-win-probability.streamlit.app
   - Identified versions 9.1.46 and 9.1.48 as a crash regression (77% and 75% negative sentiment rate)
   - Deployed as a 7-page interactive Streamlit app with topic exploration, version trends, and a ranked priority matrix
 
-Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb
+Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb  
 Live App: https://spotify-review-intelligence.streamlit.app
 
 
@@ -40,7 +40,7 @@ Live App: https://spotify-review-intelligence.streamlit.app
 **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb
 
 
-### 1. Badminton Match Analysis | BWF World Tour 2018–2021
+### 4. Badminton Match Analysis | BWF World Tour 2018–2021
 - Analyzed **6,736 professional badminton matches** to study country dominance, match competitiveness, and COVID-era disruptions.
 - Built a **logistic regression model** to predict whether a match goes to **3 sets**.
 - Performed end-to-end analysis including EDA, visualizations (bar, line, box plots), feature engineering, and model evaluation.
