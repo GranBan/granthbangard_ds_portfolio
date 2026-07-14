@@ -109,22 +109,19 @@ Both models are well-calibrated in the 0.5-0.8 range, with Logistic Regression t
 
 This repository contains the analysis notebook. The deployed Streamlit app lives in a separate repository.
 
-Cricket T20 Win Probability Predictor/
-├── t20_win_probability.ipynb
-└── README.md
-
 **App source code:** https://github.com/GranBan/cricket-t20-win-probability
 
-Cricket T20 Win Probability Predictor/
-  ├── t20_win_probability.ipynb
-  ├── assets/
-    ├── screenshots/
-      ├── Homepage Hero - T20
-      ├── Live Match Predictor
-      ├── Live Prediction Explainer
-      ├── Live Prediction SHAP Features Waterfall.png
-      ├── Calibration Curves.png
-  └── README.md
+Cricket T20 Win Probability Predictor/  
+  ├── t20_win_probability.ipynb  
+  ├── README.md  
+  ├── assets/  
+    ├── screenshots/  
+      ├── calibration_curves.png  
+      ├── famous_matches.png  
+      ├── homepage_hero_t20.png  
+      ├── live_match_predictor.png  
+      ├── live_prediction_explainer.png  
+      └── live_prediction_SHAP_features_waterfall.png  
 
 ## Installation
 
