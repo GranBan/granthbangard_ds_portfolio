@@ -1,6 +1,6 @@
 # granthbangard_ds_portfolio
 
-A portfolio of Data Science and ML projects where I explore data, build models, and explain insights in a clear, practical way. Each project walks through the full workflow, from cleaning and visualization to feature engineering and prediction using Python. Built to showcase my hands-on approach to analytics and readiness for internships in DS/ML.
+A portfolio of end-to-end Data Science and Machine Learning projects spanning predictive modeling, natural language processing, explainable AI, and interactive deployment. Each project combines rigorous modeling, thoughtful feature engineering, and business-oriented insights, then is deployed as a production-style Streamlit application.
 
 <br>
 
