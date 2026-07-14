@@ -3,6 +3,7 @@
 A portfolio of Data Science and ML projects where I explore data, build models, and explain insights in a clear, practical way. Each project walks through the full workflow, from cleaning and visualization to feature engineering and prediction using Python. Built to showcase my hands-on approach to analytics and readiness for internships in DS/ML.
 
 <br>
+
 ## Projects
 
 ### 1. Cricket T20 Win Probability Predictor
@@ -32,8 +33,9 @@ Live App: https://cricket-t20-win-probability.streamlit.app
 Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb  
   
 Live App: https://spotify-review-intelligence.streamlit.app
-  
-  
+
+***
+
 ### 3. Customer Churn Analysis and Retention Intelligence
 - Built a **business-focused churn intelligence system** to identify high-risk users and key behavioral drivers of churn.
 - Achieved **82% accuracy**, identifying **35% of high-risk customers**, enabling targeted retention strategies.
@@ -41,8 +43,9 @@ Live App: https://spotify-review-intelligence.streamlit.app
 - Translated model outputs into actionable retention strategies by customer risk segment that could **reduce churn by ~12–15%**, bridging predictive analytics with real-world business decisions.
 
 **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb
-  
-  
+
+---
+
 ### 4. Badminton Match Analysis | BWF World Tour 2018–2021
 - Analyzed **6,736 professional badminton matches** to study country dominance, match competitiveness, and COVID-era disruptions.
 - Built a **logistic regression model** to predict whether a match goes to **3 sets**.
@@ -53,8 +56,9 @@ Live App: https://spotify-review-intelligence.streamlit.app
   - COVID-19 caused an ~83% drop in matches in 2020 vs. 2019.
 
 **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/badminton-match-analysis/badminton-match-analysis.ipynb  
-  
-  
+
+<br>
+
 ## Skills Highlighted
 
 - Python, pandas, NumPy, scikit-learn, XGBoost, transformers, BERTopic, SHAP, Matplotlib, Seaborn, Plotly
@@ -66,8 +70,9 @@ Live App: https://spotify-review-intelligence.streamlit.app
 - Temporal Validation, Model Calibration, and Explainability (SHAP)
 - End-to-End Deployment (Streamlit Community Cloud)
 - Data Storytelling and Visualization  
-  
-  
+
+<br>
+
 ## Contact
 
 **GitHub:** https://github.com/GranBan  
