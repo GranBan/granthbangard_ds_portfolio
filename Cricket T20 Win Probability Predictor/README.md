@@ -1,6 +1,6 @@
 # Cricket T20 Win Probability Predictor
 
-This project builds a machine learning system that predicts the win probability of the chasing team at any point in a T20 cricket match, trained on 10,458 professional matches across 10 international T20 leagues from 2008 to 2026. The model updates after every over and is deployed as a live interactive Streamlit app, including full match replay, famous match case studies, and explainability tools.
+Predicts the probability that the chasing team wins a T20 cricket match from any completed over using ball-by-ball historical data. Trained on over 2.3 million deliveries from 10,458 professional matches spanning 10 international leagues.
 
 ## Project Objectives
 
