@@ -15,6 +15,7 @@ A portfolio of Data Science and ML projects where I explore data, build models, 
   - Deployed as a 5-page interactive Streamlit app with live prediction, full match replay, and 21 famous match case studies
 
 Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb  
+
 Live App: https://cricket-t20-win-probability.streamlit.app
 
 
@@ -28,6 +29,7 @@ Live App: https://cricket-t20-win-probability.streamlit.app
   - Deployed as a 7-page interactive Streamlit app with topic exploration, version trends, and a ranked priority matrix
 
 Notebook: https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb  
+
 Live App: https://spotify-review-intelligence.streamlit.app
 
 
