@@ -22,8 +22,13 @@ Predicts the win probability of the chasing team after every over of a T20 crick
 | XGBoost | 0.923 | 0.348 | 0.113 |
 | **XGBoost (Calibrated)** | **0.924** | **0.345** | **0.112** |
 
-<!-- SCREENSHOT: Live Match Predictor page -->
-<!-- SCREENSHOT: SHAP explanation page -->
+![Description](assets/screenshots/live_match_predictor.png)
+
+---
+![Description](assets/screenshots/live_prediction_explainer.png)
+
+---
+![Description](assets/screenshots/live_prediction_SHAP_features_waterfall.png)
 
 ---
 
@@ -80,8 +85,11 @@ graph LR
 
 **Feature Engineering** — Full pipeline documentation, including features tried and rejected, with reasoning made explicit.
 
-<!-- SCREENSHOT: Famous Matches page -->
-<!-- SCREENSHOT: Model Insights / calibration curves -->
+![Description](assets/screenshots/famous_matches.png)
+
+---
+![Description](assets/screenshots/calibration_curves.png)
+
 
 ---
 
