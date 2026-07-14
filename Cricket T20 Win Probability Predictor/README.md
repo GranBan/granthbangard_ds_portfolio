@@ -1,96 +1,194 @@
 # Cricket T20 Win Probability Predictor
 
-Predicts the probability that the chasing team wins a T20 cricket match from any completed over using ball-by-ball historical data. Trained on over 2.3 million deliveries from 10,458 professional matches spanning 10 international leagues.
+Predicts the win probability of the chasing team after every over of a T20 cricket match, using ball-by-ball data from 2.3 million deliveries across 10,458 professional matches. Calibrated XGBoost achieves 0.924 AUC and 0.112 Brier Score on a chronologically held-out 2025-2026 test set, validated against real match narratives including the 2024 T20 World Cup Final.
 
-## Project Objectives
+**10,458 matches** · **2.39M deliveries** · **10 T20 leagues** · **AUC 0.924** · **Brier 0.112** · **XGBoost + SHAP** · **[Live App](https://cricket-t20-win-probability.streamlit.app)**
 
-- Build a win probability model that updates after every over of a T20 chase
-- Validate the model using a genuine temporal train/test split, not random shuffling
-- Compare a baseline model against a more complex model and justify the choice with evidence
-- Calibrate predicted probabilities so they reflect real-world win rates
-- Explain individual predictions using SHAP, not just report aggregate accuracy
-- Deploy a working, interactive product, not just a notebook
+![Description](assets/screenshots/homepage_hero_t20.png)
 
-## Key Insights
+---
 
-- **Pressure differential (`crr_rrr_difference`) is the single strongest predictor**, more important than raw runs required or wickets in hand individually.
-- **Rolling momentum features matter**: teams scoring heavily in the last 3 overs are in a meaningfully different position than teams with the same cumulative total but a slower recent scoring rate.
-- **Three engineered features (`remaining_balls`, `remaining_wickets`, `match_phase`) contributed zero marginal SHAP value** once their signal was captured by other features, and were dropped without any loss in model performance.
-- **Calibration matters as much as accuracy for a probability model**: XGBoost and Logistic Regression had nearly identical calibration in the mid-probability range, but XGBoost was clearly better calibrated at the high-confidence end (80-100%), the range that matters most in a live, nearly-decided chase.
+## Live Demo
 
-## Methods & Techniques
-
-### 1. Data Collection & Cleaning
-- Parsed 10,458 match JSONs from [Cricsheet](https://cricsheet.org) into a single ball-by-ball dataframe (2.3M+ rows)
-- Filtered to 2nd innings (chasing team) only, since that's the natural framing for a live win probability tracker
-- Dropped ~2% of matches with no recorded winner (abandoned, no-result, or unrecorded Super Over decisions)
-
-### 2. Feature Engineering
-- Required runs, required run rate, current run rate, and their difference (the strongest predictor)
-- Interaction term combining wickets in hand and balls remaining
-- Rolling 3-over runs and wickets, capturing momentum rather than just cumulative totals
-- Label encoding for venue, batting team, and bowling team
-
-### 3. Temporal Train/Test Split
-- Seasons 2005-2007 dropped (too little T20 data from cricket's early years)
-- Train: 2008-2024, Test: 2025-2026, split by filtering on season directly rather than random shuffling, to prevent the model from being evaluated on the past after training on the future
-
-### 4. Model Comparison
-- Logistic Regression baseline (AUC 0.917, Log Loss 0.360, Brier Score 0.118)
-- XGBoost (AUC 0.923, Log Loss 0.348, Brier Score 0.113), improving on every metric
-- Isotonic calibration applied on top of XGBoost (Brier Score 0.112)
-
-### 5. Explainability
-- SHAP used to identify and drop three zero-importance features
-- SHAP waterfall plots explain individual predictions in the deployed app
-
-### 6. Case Study Validation
-- Win probability curves generated for iconic matches (India vs South Africa T20 WC Final 2024, Mumbai Indians vs Chennai Super Kings IPL Final 2019) to sanity-check the model against real, dramatic match narratives
-- Extended to 21 famous T20 matches in the deployed app
-
-## Model Performance
+- **App:** https://cricket-t20-win-probability.streamlit.app
+- **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb
+- **Data Source:** [Cricsheet](https://cricsheet.org)
 
 | Model | AUC | Log Loss | Brier Score |
 |---|---|---|---|
 | Logistic Regression | 0.917 | 0.360 | 0.118 |
 | XGBoost | 0.923 | 0.348 | 0.113 |
-| XGBoost (Calibrated) | 0.924 | 0.345 | 0.112 |
+| **XGBoost (Calibrated)** | **0.924** | **0.345** | **0.112** |
 
-**Final Model:** Calibrated XGBoost, selected for its superior log loss and high-confidence calibration, the metrics that matter most for a live probability tracker.
+<!-- SCREENSHOT: Live Match Predictor page -->
+<!-- SCREENSHOT: SHAP explanation page -->
 
-## Known Limitations
+---
 
-- Calibration was evaluated using the calibrator fit on the test set itself rather than a separate held-out validation set, so the calibration improvement is somewhat optimistic
-- Venue defaults to a fixed value in the deployed app's Live Predictor, since asking users for exact venue names isn't practical
-- The model performs poorly on extreme last-ball scenarios, which are rare edge cases where historical data is sparse
+## Why This Project Exists
 
-## Live App
+Most sports win-probability projects report a ranking metric (AUC, accuracy) and stop. But a win probability system's output is consumed directly as a number, "70%", so probability quality matters as much as classification correctness. This project treats calibration as a requirement to be measured and corrected, not assumed, and validates the final model against dramatic real matches before shipping it.
 
-The model is deployed as a 5-page Streamlit app:
-- **Live Match Predictor**: enter current match state, get instant win probability
-- **Full Match Replay**: upload any Cricsheet T20 JSON, watch win probability evolve over every over
-- **Famous Matches**: relive 21 iconic T20 finals and thrillers through the model's eyes
-- **Model Insights**: SHAP feature importance, calibration curves, live prediction explanations
-- **Feature Engineering**: full pipeline documentation with design rationale
+---
 
-👉 [Live app](https://cricket-t20-win-probability.streamlit.app)
+## Pipeline
 
-## Skills Demonstrated
+```mermaid
+graph LR
+    A[Cricsheet JSON] --> B[Parser]
+    B --> C[Ball-by-ball dataframe]
+    C --> D[2nd innings filter]
+    D --> E[Over-level aggregation]
+    E --> F[Feature engineering]
+    F --> G[Temporal split]
+    G --> H[Logistic Regression baseline]
+    H --> I[XGBoost]
+    I --> J[Isotonic calibration]
+    J --> K[SHAP feature selection]
+    K --> L[Streamlit deployment]
+```
 
-- Python (pandas, NumPy, scikit-learn, XGBoost, SHAP, Matplotlib, Plotly)
-- Temporal validation and leakage prevention
-- Model comparison and calibration (isotonic regression, calibration curves)
-- Feature engineering and SHAP-driven feature selection
-- End-to-end deployment (Streamlit Community Cloud)
-- Data storytelling through real match case studies
+**Ingestion.** Custom parser flattens 10,458 Cricsheet match JSONs into a single 2.39M-row ball-by-ball dataframe.
 
-## View the Notebook
+**Innings filter.** Only 2nd innings (chasing team) rows are kept. First-innings win probability requires projecting a target first, a different problem, deliberately scoped out.
 
-👉 [Open the notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb)
+**Over-level aggregation.** Predictions are made after every over, not every ball. Ball-level probabilities were rejected because they introduce visually noisy, non-monotonic swings that undermine trust in a live product, even when the underlying math is valid.
 
-## Future Improvements
+**Feature engineering.** Required runs, required run rate, current run rate, and their difference (`crr_rrr_difference`, the strongest single predictor) are computed from game state. A `wickets_x_balls` interaction term captures that 8 wickets with 30 balls left is materially different from 2 wickets with 30 balls left. Rolling 3-over runs and wickets add momentum, since two teams at the same cumulative score can be in very different form.
 
-- Three-way train/validation/test split for a methodologically cleaner calibration evaluation
-- First innings score prediction, chaining into the current 2nd innings model
-- Ablation study quantifying the exact contribution of calibration and rolling features
-- Error analysis identifying systematic patterns in the model's biggest misses
+**Temporal split.** Cricket has changed materially since 2008, scoring rates are higher, batting is more aggressive. A random split would let 2024 matches leak into training while 2010 matches sit in test. Filtered directly on `season`: train 2008-2024, test 2025-2026, with 2005-2007 dropped for insufficient T20 volume.
+
+**Baseline before complexity.** Logistic Regression is trained first as a genuine benchmark (0.917 AUC on its own). XGBoost is justified as final model only because it beats that baseline on every metric measured.
+
+**Calibration.** Isotonic regression fit on top of XGBoost, verified visually with calibration curves rather than assumed correct.
+
+**SHAP for feature selection.** Not just an interpretation chart, three features showed exactly zero mean absolute SHAP value and were dropped with no performance loss, an evidence-driven decision, not intuition.
+
+---
+
+## Interactive Demo
+
+**Live Match Predictor** — Enter current over, runs, wickets, target, and teams; returns an instant calibrated win probability with a live SHAP waterfall showing which features drove that specific prediction.
+
+**Full Match Replay** — Upload any Cricsheet T20 match JSON. The app runs the identical feature pipeline used in training and plots the win probability curve over every over of that match.
+
+**Famous Matches** — 21 pre-loaded historic T20 finals and thrillers, each with the model's win probability curve overlaid on actual match events.
+
+**Model Insights** — Calibration curves for both models side by side, global SHAP feature importance, and a live SHAP explainer tied to user input.
+
+**Feature Engineering** — Full pipeline documentation, including features tried and rejected, with reasoning made explicit.
+
+<!-- SCREENSHOT: Famous Matches page -->
+<!-- SCREENSHOT: Model Insights / calibration curves -->
+
+---
+
+## Feature Engineering
+
+| Feature | Rationale |
+|---|---|
+| `crr_rrr_difference` | Strongest single predictor; captures pressure directly |
+| `wickets_x_balls` | Interaction term; wickets and balls remaining aren't independent |
+| `runs_in_last_3_overs`, `wickets_in_last_3_overs` | Momentum, not just cumulative totals |
+| `remaining_balls`, `remaining_wickets` | **Rejected** — zero marginal SHAP value, fully absorbed by `wickets_x_balls` |
+| `match_phase` | **Rejected** — zero marginal SHAP value, redundant with `over` |
+
+---
+
+## Evaluation
+
+Accuracy is reported for completeness but isn't the optimization target. **Log loss and Brier score are primary**, they penalize confidently wrong predictions and directly measure whether stated confidence matches reality.
+
+Both models are well-calibrated in the 0.5-0.8 range, with Logistic Regression tracking marginally tighter there. XGBoost is clearly better calibrated at 0.8-1.0, the range that matters most operationally since that's where a live chase sits during its most-watched, most-decided moments.
+
+---
+
+## Repository Structure
+
+This repository contains the analysis notebook. The deployed Streamlit app lives in a separate repository.
+
+Cricket T20 Win Probability Predictor/
+├── t20_win_probability.ipynb
+└── README.md
+
+**App source code:** https://github.com/GranBan/cricket-t20-win-probability
+
+Cricket T20 Win Probability Predictor/
+  ├── t20_win_probability.ipynb
+  ├── assets/
+    ├── screenshots/
+      ├── Homepage Hero - T20
+      ├── Live Match Predictor
+      ├── Live Prediction Explainer
+      ├── Live Prediction SHAP Features Waterfall.png
+      ├── Calibration Curves.png
+  └── README.md
+
+## Installation
+
+```bash
+pip3 install -r requirements.txt
+streamlit run app.py
+```
+
+## Tech Stack
+
+- **Language:** Python
+- **ML:** scikit-learn, XGBoost
+- **Explainability:** SHAP
+- **Visualization:** Matplotlib, Plotly
+- **Deployment:** Streamlit Community Cloud
+- **Data:** Cricsheet (JSON), pandas, NumPy
+
+---
+
+<details>
+<summary><strong>Engineering Decisions</strong></summary>
+
+**Why over-level, not ball-level?** Ball-level probability is noisier and can look non-monotonic in a way that undermines trust, even when statistically sound.
+
+**Why temporal split, not k-fold?** Random or k-fold splitting across seasons leaks future data into training, inflating performance in a way that wouldn't survive real deployment.
+
+**Why XGBoost over Logistic Regression?** By measurement, not default. LR was evaluated first; XGBoost is final only because it beat it on every metric checked.
+
+**Why isotonic over Platt scaling?** Isotonic is non-parametric and more flexible, and 142K+ training rows avoid its main failure mode of overfitting small samples.
+
+**Why label encoding over one-hot?** One-hot across hundreds of venues/teams from 10 leagues creates a large sparse space for marginal benefit. Encoders fit on the full dataset before the split, since encoding doesn't touch the target and carries no leakage risk.
+
+</details>
+
+<details>
+<summary><strong>Challenges</strong></summary>
+
+**Indexing bug risk.** Filtering `df_model` on a boolean mask built from a separate `df_over` dataframe worked only because both shared identical indices at that point, a fragile pattern that would silently break on out-of-order execution. Fixed to filter on `df_model`'s own column.
+
+**Calibration methodology.** The isotonic calibrator was fit with `cv='prefit'` directly on the test set rather than a separate validation set, making the reported calibration improvement somewhat optimistic. The underlying XGBoost model was trained on properly separated data; only the calibration evaluation carries this caveat.
+
+**Deployment defaults.** The live predictor can't reasonably ask a casual user for an exact venue name, so venue defaults to a fixed encoded value, a real tradeoff between input friction and feature completeness.
+
+</details>
+
+<details>
+<summary><strong>Limitations</strong></summary>
+
+- Calibration was evaluated with the calibrator fit on the test set itself; a three-way split would remove this optimism bias
+- The model degrades on extreme last-ball scenarios (15+ runs off one ball), a genuine edge case with sparse historical precedent
+- Venue isn't meaningfully used at inference time in the deployed app, since exact venue input isn't practical for a casual user
+
+</details>
+
+<details>
+<summary><strong>Future Improvements</strong></summary>
+
+- Three-way train/validation/test split to remove the calibration optimism bias
+- Ablation study isolating the AUC/Brier contribution of calibration and rolling-window features independently
+- First-innings score projection, chained into the existing model for a full-match probability system
+- Systematic error analysis surfacing whether misses cluster by competition, venue, or match phase
+
+</details>
+
+---
+
+## Results
+
+10,458 matches, 2.39M ball-level records, one calibrated XGBoost model. AUC 0.924, Log Loss 0.345, Brier Score 0.112 on a chronologically held-out 2025-2026 season. Three features removed on SHAP evidence with no performance cost. Validated qualitatively against 21 real matches before shipping as a 5-page live Streamlit application.
