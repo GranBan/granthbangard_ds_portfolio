@@ -13,6 +13,7 @@ Transforms 100,000 raw Google Play reviews into a prioritized product decision s
 ## Live Demo
 
 - **App:** https://spotify-review-intelligence.streamlit.app
+- > **Note:** The app may take 30-60 seconds to wake up on first load if it's been inactive, Streamlit Community Cloud puts unused apps to sleep. Subsequent loads are fast.
 - **Notebook:** https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb
 - **Data Source:** Google Play Store, scraped directly via `google-play-scraper`
 
