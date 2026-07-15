@@ -68,13 +68,26 @@ graph LR
     B --> C[Cleaning]
     C --> D[Star-rating labels]
     D --> E[DistilBERT fine-tuning]
-    E --> F[Full inference: 100K reviews]
+    E --> F[Full inference]
     F --> G[English filter]
     G --> H[BERTopic clustering]
     H --> I[Manual topic labeling]
     I --> J[Temporal trend analysis]
     J --> K[Priority matrix]
     K --> L[Streamlit deployment]
+
+    style A fill:#1f2937,stroke:#3b82f6,color:#fff
+    style B fill:#1f2937,stroke:#3b82f6,color:#fff
+    style C fill:#1f2937,stroke:#3b82f6,color:#fff
+    style D fill:#1f2937,stroke:#3b82f6,color:#fff
+    style E fill:#1f2937,stroke:#10b981,color:#fff
+    style F fill:#1f2937,stroke:#10b981,color:#fff
+    style G fill:#1f2937,stroke:#f59e0b,color:#fff
+    style H fill:#1f2937,stroke:#f59e0b,color:#fff
+    style I fill:#1f2937,stroke:#f59e0b,color:#fff
+    style J fill:#1f2937,stroke:#ef4444,color:#fff
+    style K fill:#1f2937,stroke:#ef4444,color:#fff
+    style L fill:#1f2937,stroke:#8b5cf6,color:#fff
 ```
 
 **Ingestion.** 100,000 Spotify reviews scraped directly from Google Play, preserving app version metadata needed for temporal analysis, a static Kaggle dump wouldn't have this.
