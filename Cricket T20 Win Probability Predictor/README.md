@@ -8,11 +8,11 @@
 
 Predicts the win probability of the chasing team after every over of a T20 cricket match, using ball-by-ball data from 2.3 million deliveries across 10,458 professional matches. Calibrated XGBoost achieves 0.924 AUC and 0.112 Brier Score on a chronologically held-out 2025-2026 test set, validated against real match narratives including the 2024 T20 World Cup Final.
 
-![Matches](https://img.shields.io/badge/Matches-10%2C458-informational)
-![Deliveries](https://img.shields.io/badge/Deliveries-2.39M-informational)
-![Leagues](https://img.shields.io/badge/Leagues-10-informational)
-![AUC](https://img.shields.io/badge/AUC-0.924-success)
-![Brier](https://img.shields.io/badge/Brier-0.112-success)
+![Matches](https://img.shields.io/badge/MATCHES-10,458-1f2937?style=for-the-badge)
+![Deliveries](https://img.shields.io/badge/DELIVERIES-2.39M-1f2937?style=for-the-badge)
+![Leagues](https://img.shields.io/badge/LEAGUES-10-1f2937?style=for-the-badge)
+![AUC](https://img.shields.io/badge/AUC-0.924-10b981?style=for-the-badge)
+![Brier](https://img.shields.io/badge/BRIER-0.112-10b981?style=for-the-badge)
 
 ## Contents
 
