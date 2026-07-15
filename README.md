@@ -37,7 +37,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 
 ## Projects
 
-### Cricket T20 Win Probability Predictor
+### [Cricket T20 Win Probability Predictor](Cricket%20T20%20Win%20Probability%20Predictor)
 
 ![Homepage](Cricket%20T20%20Win%20Probability%20Predictor/assets/screenshots/homepage_hero_t20.png)
 
@@ -51,7 +51,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 
 ---
 
-### Spotify NLP App Review Intelligence System
+### [Spotify NLP App Review Intelligence System](Spotify%20NLP%20App%20Review%20Intelligence%20System)
 
 ![Homepage](Spotify%20NLP%20App%20Review%20Intelligence%20System/assets/screenshots/homepage_hero_spotify.png)
 
