@@ -54,6 +54,10 @@ Predicts the win probability of the chasing team after every over of a T20 crick
 
 ---
 
+## Results
+
+10,458 matches, 2.39M ball-level records, one calibrated XGBoost model. AUC 0.924, Log Loss 0.345, Brier Score 0.112 on a chronologically held-out 2025-2026 season. Three features removed on SHAP evidence with no performance cost. Validated quantitatively on a chronologically held-out test set and qualitatively against 21 historic matches before deployment as a 5-page live Streamlit application.
+
 ## Why This Project Exists
 
 Most sports win-probability projects report a ranking metric (AUC, accuracy) and stop. But a win probability system's output is consumed directly as a number, "70%", so probability quality matters as much as classification correctness. This project treats calibration as a requirement to be measured and corrected, not assumed, and validates the final model against dramatic real matches before shipping it.
@@ -237,9 +241,3 @@ This repository contains the model development notebook. The deployed Streamlit 
 - Systematic error analysis surfacing whether misses cluster by competition, venue, or match phase
 
 </details>
-
----
-
-## Results
-
-10,458 matches, 2.39M ball-level records, one calibrated XGBoost model. AUC 0.924, Log Loss 0.345, Brier Score 0.112 on a chronologically held-out 2025-2026 season. Three features removed on SHAP evidence with no performance cost. Validated quantitatively on a chronologically held-out test set and qualitatively against 21 historic matches before deployment as a 5-page live Streamlit application.
