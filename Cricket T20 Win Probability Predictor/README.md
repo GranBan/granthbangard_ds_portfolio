@@ -64,7 +64,30 @@ Most sports win-probability projects report a ranking metric (AUC, accuracy) and
 
 ```mermaid
 graph LR
-    A[Cricsheet JSON] --> B[Parser] --> C[Ball-by-ball df] --> D[2nd innings filter] --> E[Over-level aggregation] --> F[Feature engineering] --> G[Temporal split] --> H[Logistic Regression] --> I[XGBoost] --> J[Isotonic calibration] --> K[SHAP selection] --> L[Streamlit]
+    A[Cricsheet JSON] --> B[Parser]
+    B --> C[Ball-by-ball dataframe]
+    C --> D[2nd innings filter]
+    D --> E[Over-level aggregation]
+    E --> F[Feature engineering]
+    F --> G[Temporal split]
+    G --> H[Logistic Regression baseline]
+    H --> I[XGBoost]
+    I --> J[Isotonic calibration]
+    J --> K[SHAP feature selection]
+    K --> L[Streamlit deployment]
+
+    style A fill:#1f2937,stroke:#3b82f6,color:#fff
+    style B fill:#1f2937,stroke:#3b82f6,color:#fff
+    style C fill:#1f2937,stroke:#3b82f6,color:#fff
+    style D fill:#1f2937,stroke:#3b82f6,color:#fff
+    style E fill:#1f2937,stroke:#f59e0b,color:#fff
+    style F fill:#1f2937,stroke:#f59e0b,color:#fff
+    style G fill:#1f2937,stroke:#10b981,color:#fff
+    style H fill:#1f2937,stroke:#10b981,color:#fff
+    style I fill:#1f2937,stroke:#10b981,color:#fff
+    style J fill:#1f2937,stroke:#ef4444,color:#fff
+    style K fill:#1f2937,stroke:#ef4444,color:#fff
+    style L fill:#1f2937,stroke:#8b5cf6,color:#fff
 ```
 
 ---
