@@ -54,6 +54,12 @@ Transforms 100,000 raw Google Play reviews into a prioritized product decision s
 
 ---
 
+## Results
+
+100,000 reviews, one fine-tuned DistilBERT classifier (93.5% macro F1), 51 BERTopic-discovered complaint themes, one real regression identified (versions 9.1.46/9.1.48), one custom priority matrix. Deployed as a 7-page live Streamlit application translating raw review text into a ranked product backlog.
+
+---
+
 ## Why This Project Exists
 
 Star ratings are a noisy proxy for sentiment, a 5-star review can contain clearly negative text ("great app but too many ads"), and rating-based filtering alone misses this. This project uses the review text itself as the primary signal, then goes further: rather than stopping at a sentiment label, it discovers what users are actually complaining about, tracks whether specific app releases made things worse, and turns all of it into a ranked list a product team could act on directly.
@@ -225,9 +231,3 @@ This repository contains the model development notebook. The deployed Streamlit 
 - Cold-start handling for detecting entirely new complaint categories as they emerge
 
 </details>
-
----
-
-## Results
-
-100,000 reviews, one fine-tuned DistilBERT classifier (93.5% macro F1), 51 BERTopic-discovered complaint themes, one real regression identified (versions 9.1.46/9.1.48), one custom priority matrix. Deployed as a 7-page live Streamlit application translating raw review text into a ranked product backlog.
