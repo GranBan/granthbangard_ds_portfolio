@@ -4,9 +4,20 @@ End-to-end Machine Learning and Data Science projects spanning predictive modeli
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue) ![XGBoost](https://img.shields.io/badge/XGBoost-ML-success) ![Transformers](https://img.shields.io/badge/Transformers-NLP-orange) ![SHAP](https://img.shields.io/badge/SHAP-Explainability-red) ![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-brightgreen)
 
-**2 Production-style ML Apps** &nbsp;·&nbsp; **100K+ Reviews** &nbsp;·&nbsp; **2.39M Sports Events** &nbsp;·&nbsp; **DistilBERT** &nbsp;·&nbsp; **XGBoost** &nbsp;·&nbsp; **SHAP** &nbsp;·&nbsp; **BERTopic**
+**2 Production-style ML Apps** · **100K+ Reviews** · **2.39M Sports Events** · **11+ Million Data Points Processed** · **10,458 Cricket Matches** · **Interactive Streamlit Deployments**
 
-Every project follows the same philosophy: build an interpretable model, evaluate it rigorously, document engineering decisions, and deploy it as an interactive application.
+Every project follows the same engineering workflow: build an interpretable model, evaluate it rigorously, document key design decisions, and deploy it as an interactive application.
+
+---
+
+> **Featured Projects:** Click any project below to explore the notebook, live application, and complete technical documentation.
+
+## Contents
+
+- [Skills](#skills)
+- [Projects](#projects)
+- [Other Projects](#other-projects)
+- [Contact](#contact)
 
 ---
 
@@ -82,6 +93,6 @@ Every project follows the same philosophy: build an interpretable model, evaluat
 
 ## Contact
 
-**GitHub:** https://github.com/GranBan  
-**LinkedIn:** https://linkedin.com/in/granth-bangard  
-**Email:** bangardgranth@gmail.com (Primary), bangard2@illinois.edu
+GitHub: https://github.com/GranBan  
+LinkedIn: https://linkedin.com/in/granth-bangard  
+Email: bangardgranth@gmail.com (Primary), bangard2@illinois.edu
