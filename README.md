@@ -42,7 +42,7 @@ Temporal train/test split to prevent leakage, isotonic calibration, and SHAP-dri
 
 ### Spotify NLP App Review Intelligence System
 
-![Homepage](Spotify%20NLP%20App%20Review%20Intelligence%20System/assets/screenshots/homepage_hero_nlp.png)
+![Homepage](Spotify%20NLP%20App%20Review%20Intelligence%20System/assets/screenshots/homepage_hero_spotify.png)
 
 **Dataset:** 100,000 Google Play reviews, scraped directly, 51 discovered complaint topics
 **Model:** Fine-tuned DistilBERT (binary sentiment), BERTopic clustering
