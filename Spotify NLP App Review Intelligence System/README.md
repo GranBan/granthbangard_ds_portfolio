@@ -169,10 +169,9 @@ Spotify NLP App Review Intelligence System/
 
 ## Installation
 
-```bash
-pip3 install -r requirements.txt
-streamlit run app.py
-```
+This repository contains the model development notebook. The deployed Streamlit application is maintained in a separate repository:
+
+**NLP:** https://github.com/GranBan/spotify-review-intelligence
 
 ## Tech Stack
 
