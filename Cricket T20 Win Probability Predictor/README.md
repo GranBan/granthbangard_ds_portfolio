@@ -178,10 +178,9 @@ Cricket T20 Win Probability Predictor/
 
 ## Installation
 
-```bash
-pip3 install -r requirements.txt
-streamlit run app.py
-```
+This repository contains the model development notebook. The deployed Streamlit application is maintained in a separate repository:
+
+**Cricket:** https://github.com/GranBan/cricket-t20-win-probability
 
 ## Tech Stack
 
