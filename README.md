@@ -82,6 +82,6 @@ Every project follows the same philosophy: build an interpretable model, evaluat
 
 ## Contact
 
-**GitHub:** https://github.com/GranBan
-**LinkedIn:** https://linkedin.com/in/granth-bangard
+**GitHub:** https://github.com/GranBan  
+**LinkedIn:** https://linkedin.com/in/granth-bangard  
 **Email:** bangardgranth@gmail.com (Primary), bangard2@illinois.edu
