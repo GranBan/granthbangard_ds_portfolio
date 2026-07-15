@@ -5,6 +5,10 @@
 ![BERTopic](https://img.shields.io/badge/BERTopic-NLP-orange) &nbsp;&nbsp;
 ![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red) &nbsp;&nbsp;
 
+**Notebook:** [View](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Spotify%20NLP%20App%20Review%20Intelligence%20System/app_review_nlp.ipynb)  
+**Live App:** [Open](https://spotify-review-intelligence.streamlit.app)  
+**App Source Code:** [View](https://github.com/GranBan/spotify-review-intelligence)
+
 Transforms 100,000 raw Google Play reviews into a prioritized product decision system for Spotify. Fine-tuned DistilBERT classifies sentiment from text (93.5% macro F1), BERTopic discovers 51 complaint themes, and a custom priority matrix scores each theme by frequency, severity, and recent trend into a ranked, actionable fix list.
 
 ![Reviews](https://img.shields.io/badge/REVIEWS-100K-1f2937?style=for-the-badge) &nbsp;&nbsp;&nbsp; ![Topics](https://img.shields.io/badge/TOPICS-51-1f2937?style=for-the-badge) &nbsp;&nbsp;&nbsp; ![Macro F1](https://img.shields.io/badge/MACRO_F1-0.935-10b981?style=for-the-badge) &nbsp;&nbsp;&nbsp; ![Confidence](https://img.shields.io/badge/CONFIDENCE-96.2%25-10b981?style=for-the-badge)
