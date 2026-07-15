@@ -68,7 +68,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 
 ## Other Projects
 
-### [Customer Churn Analysis and Retention Intelligence](granthbangard_ds_portfolio/Customer%Churn%and%Retention%Intelligence)
+### [Customer Churn Analysis and Retention Intelligence](Customer%20Churn%20and%20Retention%20Intelligence)
 
 - Built a business-focused churn intelligence system to identify high-risk users and key behavioral drivers of churn
 - Achieved 82% accuracy, identifying 35% of high-risk customers, enabling targeted retention strategies
@@ -79,7 +79,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 
 ---
 
-### [Badminton Match Analysis | BWF World Tour 2018-2021](granthbangard_ds_portfolio/badminton-match-analysis)
+### [Badminton Match Analysis | BWF World Tour 2018-2021](badminton-match-analysis)
 
 - Analyzed 6,736 professional matches to study country dominance, match competitiveness, and COVID-era disruptions
 - Built a logistic regression model to predict whether a match goes to 3 sets
