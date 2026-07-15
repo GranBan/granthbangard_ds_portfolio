@@ -1,18 +1,12 @@
 # Cricket T20 Win Probability Predictor
 
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-![XGBoost](https://img.shields.io/badge/XGBoost-ML-success)
-![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
+![Python](https://img.shields.io/badge/Python-3.13-blue) &nbsp; ![XGBoost](https://img.shields.io/badge/XGBoost-ML-success) &nbsp; ![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
 
 **Notebook:** [View](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Cricket%20T20%20Win%20Probability%20Predictor/t20_win_probability.ipynb) · **Live App:** [Open](https://cricket-t20-win-probability.streamlit.app) · **App Source Code:** [View](https://github.com/GranBan/cricket-t20-win-probability)
 
 Predicts the win probability of the chasing team after every over of a T20 cricket match, using ball-by-ball data from 2.3 million deliveries across 10,458 professional matches. Calibrated XGBoost achieves 0.924 AUC and 0.112 Brier Score on a chronologically held-out 2025-2026 test set, validated against real match narratives including the 2024 T20 World Cup Final.
 
-![Matches](https://img.shields.io/badge/MATCHES-10,458-1f2937?style=for-the-badge)
-![Deliveries](https://img.shields.io/badge/DELIVERIES-2.39M-1f2937?style=for-the-badge)
-![Leagues](https://img.shields.io/badge/LEAGUES-10-1f2937?style=for-the-badge)
-![AUC](https://img.shields.io/badge/AUC-0.924-10b981?style=for-the-badge)
-![Brier](https://img.shields.io/badge/BRIER-0.112-10b981?style=for-the-badge)
+![Matches](https://img.shields.io/badge/MATCHES-10,458-1f2937?style=for-the-badge) &nbsp;&nbsp; ![Deliveries](https://img.shields.io/badge/DELIVERIES-2.39M-1f2937?style=for-the-badge) &nbsp;&nbsp; ![Leagues](https://img.shields.io/badge/LEAGUES-10-1f2937?style=for-the-badge) &nbsp;&nbsp; ![AUC](https://img.shields.io/badge/AUC-0.924-10b981?style=for-the-badge) &nbsp;&nbsp; ![Brier](https://img.shields.io/badge/BRIER-0.112-10b981?style=for-the-badge)
 
 ## Contents
 
