@@ -85,7 +85,7 @@ graph LR
 | SVM | 0.8482 ± 0.0113 | 0.8395 | 0.90 | 0.44 |
 
 <p align="center">
-  <img src="Plots/roc_curve_plot.png" width="700">
+  <img src="Plots/ROC_curve_plot.png" width="700">
 </p>
 
 XGBoost edges out Logistic Regression by roughly 0.002 ROC-AUC after tuning — a gap small enough that interpretability, not raw accuracy, drove the final model choice. Logistic Regression was deployed at an F2-optimized threshold of **0.298**, catching **92% of actual churners** (345 of 374 in the test set) while keeping the model's decisions fully explainable through coefficients and odds ratios.
@@ -118,10 +118,6 @@ Predicted probabilities are converted into three risk tiers, each mapped to a co
 </p>
 
 Targeted spend across the top two tiers totals **$21,150** — versus **$56,280** for a blanket $40 offer to every customer, a **2.7x cost reduction** with no loss in coverage of actual churners.
-
----
-
-![Risk Segmentation](Plots/risk_segmentation.png)
 
 ---
 
