@@ -92,7 +92,6 @@ graph LR
 
 ![ROC Curves](Plots/ROC_curve_plot.png)
 
-<br>
 
 XGBoost edges out Logistic Regression by roughly 0.002 ROC-AUC after tuning — a gap small enough that interpretability, not raw accuracy, drove the final model choice. Logistic Regression was deployed at an F2-optimized threshold of **0.298**, catching **92% of actual churners** (345 of 374 in the test set) while keeping the model's decisions fully explainable through coefficients and odds ratios.
 
