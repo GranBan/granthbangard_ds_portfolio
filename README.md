@@ -6,7 +6,7 @@ End-to-end Machine Learning and Data Science projects spanning predictive modeli
 
 **2 Production-style ML Apps** · **100K+ Reviews** · **2.39M Sports Events** · **11+ Million Data Points Processed** · **10,458 Cricket Matches** · **Interactive Streamlit Deployments**
 
-Every project follows the same engineering workflow: build an interpretable model, evaluate it rigorously, document key design decisions, and deploy it as an interactive application.
+Every project follows an end-to-end ML workflow: build an interpretable model, evaluate it rigorously, document key engineering decisions, and, where appropriate, deploy it as an interactive application.
 
 ---
 
@@ -30,7 +30,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 | **Explainability** | SHAP |
 | **Validation** | Temporal train/test splits, calibration (isotonic regression) |
 | **Visualization** | Plotly, Matplotlib, Seaborn |
-| **Deployment** | Streamlit Community Cloud |
+| **Deployment** | Streamlit |
 
 ---
 
@@ -66,7 +66,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 ---
 
 ### [Customer Churn & Retention Intelligence](Customer%20Churn%20and%20Retention%20Intelligence)
-![Risk Segmentation](Customer%20Churn%20and%20Retention%20Intelligence/Plots/risk_segmentation.png)
+
 - **Dataset:** 7,032 telecom customers · 27% churn rate · 4 model families compared
 - **Model:** Tuned Logistic Regression (F2-optimized threshold), benchmarked against Random Forest, XGBoost, and SVM
 - **Results:** ROC-AUC 0.843 · 92% recall on churned customers, at an F2-optimized decision threshold of 0.298
@@ -74,7 +74,7 @@ Every project follows the same engineering workflow: build an interpretable mode
 - XGBoost retained as an independent validation check (via partial dependence) that the simpler, deployed model isn't missing non-linear signal
 - Risk segmentation converts predictions into a 3-tier retention action plan, cutting estimated targeted spend by 2.7x versus a blanket offer
 
-🔗 [Notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb)
+🔗 [Notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb) &nbsp;·&nbsp; 🔗 [Project README](https://github.com/GranBan/granthbangard_ds_portfolio/tree/main/Customer%20Churn%20and%20Retention%20Intelligence)
 
 ---
 
