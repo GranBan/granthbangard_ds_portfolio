@@ -16,7 +16,6 @@ Every project follows the same engineering workflow: build an interpretable mode
 
 - [Skills](#skills)
 - [Projects](#projects)
-- [Other Projects](#other-projects)
 - [Contact](#contact)
 
 ---
@@ -66,28 +65,16 @@ Every project follows the same engineering workflow: build an interpretable mode
 
 ---
 
-## Other Projects
-
-### [Customer Churn Analysis and Retention Intelligence](Customer%20Churn%20and%20Retention%20Intelligence)
-
-- Built a business-focused churn intelligence system to identify high-risk users and key behavioral drivers of churn
-- Achieved 82% accuracy, identifying 35% of high-risk customers, enabling targeted retention strategies
-- End-to-end analysis: data cleaning, EDA, feature engineering, and machine learning modeling optimized for recall and ROC-AUC
-- Retention strategies by risk segment estimated to reduce churn by ~12-15%
+### [Customer Churn & Retention Intelligence](Customer%20Churn%20and%20Retention%20Intelligence)
+![Risk Segmentation](Customer%20Churn%20and%20Retention%20Intelligence/Plots/risk_segmentation.png)
+- **Dataset:** 7,032 telecom customers · 27% churn rate · 4 model families compared
+- **Model:** Tuned Logistic Regression (F2-optimized threshold), benchmarked against Random Forest, XGBoost, and SVM
+- **Results:** ROC-AUC 0.843 · 92% recall on churned customers, at an F2-optimized decision threshold of 0.298
+- Compares four distinct learning paradigms (linear, bagging, boosting, kernel-based) rather than defaulting to the highest-accuracy model
+- XGBoost retained as an independent validation check (via partial dependence) that the simpler, deployed model isn't missing non-linear signal
+- Risk segmentation converts predictions into a 3-tier retention action plan, cutting estimated targeted spend by 2.7x versus a blanket offer
 
 🔗 [Notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/Customer%20Churn%20and%20Retention%20Intelligence/Customer%20Churn%20%26%20Retention.ipynb)
-
----
-
-### [Badminton Match Analysis | BWF World Tour 2018-2021](badminton-match-analysis)
-
-- Analyzed 6,736 professional matches to study country dominance, match competitiveness, and COVID-era disruptions
-- Built a logistic regression model to predict whether a match goes to 3 sets
-- Men's singles go to 3 sets ~35% of the time; women's singles ~30%
-- China dominates women's singles; India & Denmark lead men's singles
-- COVID-19 caused an ~83% drop in matches in 2020 vs. 2019
-
-🔗 [Notebook](https://github.com/GranBan/granthbangard_ds_portfolio/blob/main/badminton-match-analysis/badminton-match-analysis.ipynb)
 
 ---
 
