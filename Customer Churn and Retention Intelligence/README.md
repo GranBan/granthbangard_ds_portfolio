@@ -126,6 +126,9 @@ Customer Churn and Retention Intelligence/
 ├── Customer Churn & Retention.ipynb
 ├── README.md
 └── Plots/
+    ├── ROC_curve_plot.png
+    ├── pdp_plot.png
+    └── risk_segmentation.png
 ```
 
 ## Tech Stack
