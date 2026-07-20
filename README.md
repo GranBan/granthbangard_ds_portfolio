@@ -25,7 +25,7 @@ Every project follows an end-to-end ML workflow: build an interpretable model, e
 | Category | Tools |
 |---|---|
 | **Languages** | Python, SQL |
-| **ML** | scikit-learn, XGBoost, Logistic Regression, Random Forest |
+| **ML** | scikit-learn, XGBoost, Logistic Regression, Random Forest, SVM |
 | **NLP** | Transformers, DistilBERT, BERTopic |
 | **Explainability** | SHAP |
 | **Validation** | Temporal train/test splits, calibration (isotonic regression) |
