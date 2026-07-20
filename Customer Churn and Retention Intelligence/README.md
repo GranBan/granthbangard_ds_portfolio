@@ -75,10 +75,6 @@ graph LR
 
 ---
 
-![Partial Dependence — XGBoost](Plots/pdp_plot.png)
-
----
-
 ## Results
 
 | Model | CV ROC-AUC | Test ROC-AUC | Recall (Churn) | Precision (Churn) |
@@ -88,10 +84,9 @@ graph LR
 | XGBoost | 0.8489 ± 0.0106 | **0.8444** | 0.90 | 0.46 |
 | SVM | 0.8482 ± 0.0113 | 0.8395 | 0.90 | 0.44 |
 
-<br>
-
-![ROC Curves](Plots/ROC_curve_plot.png)
-
+<p align="center">
+  <img src="Plots/roc_curve_plot.png" width="700">
+</p>
 
 XGBoost edges out Logistic Regression by roughly 0.002 ROC-AUC after tuning — a gap small enough that interpretability, not raw accuracy, drove the final model choice. Logistic Regression was deployed at an F2-optimized threshold of **0.298**, catching **92% of actual churners** (345 of 374 in the test set) while keeping the model's decisions fully explainable through coefficients and odds ratios.
 
@@ -117,6 +112,10 @@ Predicted probabilities are converted into three risk tiers, each mapped to a co
 | High Risk | Personalized retention call + discount offer | $40 | 488 |
 | Medium Risk | Automated engagement email + service reminder | $5 | 326 |
 | Low Risk | No action | $0 | 593 |
+
+<p align="center">
+  <img src="Plots/risk_segmentation.png" width="600">
+</p>
 
 Targeted spend across the top two tiers totals **$21,150** — versus **$56,280** for a blanket $40 offer to every customer, a **2.7x cost reduction** with no loss in coverage of actual churners.
 
@@ -161,6 +160,10 @@ Customer Churn and Retention Intelligence/
 **Why Logistic Regression over XGBoost despite XGBoost's higher ROC-AUC?** The gap after tuning is ~0.002 ROC-AUC — negligible. Logistic Regression's coefficients and odds ratios give a retention team a transparent, per-customer explanation for every prediction; XGBoost would need SHAP on top to reach comparable transparency for a marginal accuracy gain.
 
 **Why validate with XGBoost's partial dependence plots instead of just trusting Logistic Regression's linearity assumption?** Logistic Regression assumes each feature contributes linearly to churn log-odds. Rather than asserting that assumption is safe, XGBoost's PDPs (which can capture non-linear effects) are used as an independent check — the two models agree closely, which is evidence, not just an assumption, that the simpler model isn't sacrificing meaningful signal.
+
+<p align="center">
+  <img src="Plots/pdp_plot.png" width="700">
+</p>
 
 **Why F2-optimized threshold over a round number?** A missed churner costs more than an unnecessary retention offer. Deriving the threshold directly from the precision-recall curve gives a reproducible, defensible number instead of an eyeballed 0.4 or 0.5.
 
